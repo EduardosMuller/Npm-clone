@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
+html,
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 1.5rem;
-    padding: 1px 1px;
-    box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
 }
 
+h1, h1, h3, h4,h5,h6{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding :0;
+    margin: 0;
+}
+header{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color:black;
+}
+p {
+    font-family:  Poppins, Arial, Helvetica, sans-serif;
+}
 .navbar {
 
     display: flex;
@@ -15,7 +25,7 @@ body {
     align-items: center;
     border-bottom: 1px solid lightgray;
     margin-bottom: 5px;
-
+    
 }
 
 nav {
@@ -23,9 +33,10 @@ nav {
 }
 
 .heart {
-    letter-spacing: 0.015625em;
-    display: inline-flex;
-    color: #000000
+    align-self: baseline;
+    margin-left: 20px;
+
+   
 }
 
 nav ul {
@@ -45,15 +56,15 @@ nav a {
 }
 
 .blackHeart {
-    width: 30px;
-    margin-right: 0.5rem;
-    margin-left: 1rem;
+    width: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .header-container {
-    display: grid;
-    grid-template-columns: 0.5fr 7fr 1fr;
-    height: 55px;
+    display:grid;
+    grid-template-columns: 0.5fr 12fr 2fr;
+    height:50px;
     width: 100%;
     border-left: 2px;
     border-right: 2px;
@@ -64,35 +75,77 @@ nav a {
     grid-row-gap: 10px;
     text-align: center;
     align-items: center;
-    place-self: center stretch;
+    
 
 }
 
+.npm_img{
+    width:60px;
+    margin-left: 10px;
 
-.npm_logo {
-    width: 70px;
 }
 
 .search-nav {
+    float:left;
     display: grid;
     grid-template-columns: 7fr 1fr;
-
-}
-
-.searchBar {
     font-size: 16px;
     font-weight: 400;
     padding-left: 1rem;
     text-align: left;
-
+    position: relative;
+    
 }
+
+.search-nav input[type=text]{
+    padding:12px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+  
+.search-nav input{
+    height:10px;
+    width: 90%;
+    background-color: rgba(0,0,0,.05);
+    margin-bottom: 9px;
+}
+
+.glass{
+   
+    background-color: rgba(0,0,0,.05);
+    padding:5.5px;
+    margin-top: 8px;
+    margin-left: 15px;
+    left:0;
+    top:0;
+    float: left;
+    width:2.5%;
+}
+
+
+.search-nav button{
+    float:right;
+    padding: 9px 10px;
+    margin-top:-42px;
+    margin-right: -54px;
+    background: #FB3B49;
+    border: none;
+    cursor: pointer; 
+    color: white;   
+    width: 8%;
+    float:right;
+    
+}
+
 
 .search-button {
     color: white;
     background-color: #FB3B49;
     font-size: 10px;
     font-weight: 400;
-    width: 100%;
+    width: 14px ;
     line-height: 2.5em;
     font-size: 16px;
 }
@@ -102,24 +155,28 @@ nav a {
 .join-loggin-buttons {
     display: grid;
     grid-template-columns: 2fr 2fr;
+    grid-gap: 3px;
     column-gap: 5px;
     height: 30px;
     margin-left: 1rem;
-    place-self: center stretch;
+    background-color: none;
+   
 }
 
 .join-loggin-buttons>.join-button {
     color: black;
-    background-color: rgb(248, 241, 241);
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    background-color: white;
+    border: 1px solid lightgray;
     font-weight: 400;
     font-size: 16px;
-    width: 120%;
-
-
-
+    width: 99%;
+    position:relative;
+    cursor:pointer;
+    }
+.join-loggin-buttons>.join-button:hover{
+    background-color: lightgray;
 }
+
 
 .join-loggin-buttons>.loggin-button {
     color: black;
@@ -129,14 +186,16 @@ nav a {
     opacity: 0.6;
     border: none;
     width: 120%;
+    cursor:pointer;
 }
 
   .section-1 {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 50px;
-    width: 100%;
-    justify-content: auto;
+    display: flex;
+    height:600px;
+    width: 99%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 4em;
     text-align: center;
@@ -145,20 +204,16 @@ nav a {
 
 }
 
-
-.wrapper-items {
-
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-row-gap: 30px;
-
+.section-1>.buttons{
+   flex-direction: row;
+   align-self: center
 }
-
 
 .section-1>.wrapper-items>h1 {
 
-    font-size: 4rem;
+    font-size: 60px;
     font-style: bold;
+    font-weight: 500;
     justify-content: center;
     text-align: center;
 }
@@ -168,8 +223,7 @@ nav a {
     text-align: center;
     padding-bottom: 2em;
     text-transform: full-width;
-    padding-left: 30em;
-    padding-right: 30em;
+    padding: 10px 31%;
 
 
 }
@@ -179,27 +233,29 @@ nav a {
     color: white;
     background-color: #FB3B49;
     font-size: 18px;
-    font-weight: 800;
-    width: 20%;
+    font-weight: 500;
+    width: 175px;
     border-style: black solid;
     line-height: 2.5em;
     margin-right: 2em;
     font-size: 20px;
     box-shadow: 8px 8px 0 rgba(251, 59, 73, .2);
-
+    border: none;
+    cursor:pointer;
 }
 
 
 
 .join-for-free-button {
     color: black;
-    background: white;
+    background: none;
     font-size: 18px;
-    font-weight: 800;
-    width: 20%;
+    font-weight: 500;
+    width: 175px;
     line-height: 2.5em;
     font-size: 20px;
-
+    border:none;
+    cursor:pointer;
 }
 
 .section-2 {
@@ -223,23 +279,33 @@ nav a {
 
 .section-2>div>.section-2-items>h2 {
 
-    font-size: 2em;
-    background: rgb(245, 207, 111);
+    font-size: 1.9em;
+    background: rgba(255, 204, 53, .4);
     transform: skewX(9deg);
     font-style: italic;
+    font-weight: 500;
+}
+.section-2>div>.section-2-items>p{
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    
 }
 
 .section-3 {
     padding-bottom: 2rem;
-    justify-content: center;
-
-
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+    display: grid;
+    
 }
 
 .section-3>.section-3-row {
     display: flex;
     position: row;
-    justify-content: space-between;
+    flex-direction: row;
+   
     align-items: baseline;
     margin-left: 8rem;
     margin-right: 8rem;
@@ -264,7 +330,8 @@ nav a {
 
 h5 {
     color: red;
-
+    font-size: large;
+    font-weight: 500;
 }
 
 .section-3-button {
@@ -272,6 +339,7 @@ h5 {
     position: row;
     justify-content: center;
     padding-top: 2rem;
+
 }
 
 .create-org-button {
@@ -285,4 +353,5 @@ h5 {
     height: 3.5rem;
     margin-top: 3rem;
     text-align: center;
+    border:none
 }
